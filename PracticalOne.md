@@ -70,6 +70,8 @@ In this exercise, you will learn how to provision a Linux Virtual Machine in the
    Provide a password for the **New Password** and **Confirm Password** fields.
    
    Lastly, set the Virtual Machine **Size** to _Small_ and click **Next** to continue.
+   
+   >**Important:** It is not possible to recover the username and password for your Virtual Machine, so it is important you make a note of these in a safe place!
 
 	![Configuring a Custom Virtual Machine](Images/creating-a-vm-configuration.png?raw=true)	
 	 
@@ -79,7 +81,7 @@ In this exercise, you will learn how to provision a Linux Virtual Machine in the
 
 	>You can also read this document on the Microsoft Security website that will help you select a secure password:  [http://www.microsoft.com/security/online-privacy/passwords-create.aspx](http://www.microsoft.com/security/online-privacy/passwords-create.aspx)
 	
-	>**You will not be able to reset the your administrator password so it is important you make a note of it in a safe place.**
+	>You will not be able to reset the your administrator password so it is important you make a note of it in a safe place.
  
 1. Under **Cloud Service** page, select **Create new cloud service**.
 
