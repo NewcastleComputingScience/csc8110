@@ -292,7 +292,13 @@ In this task, you will install and configure a Drupal portal on your Windows Azu
 	mysqladmin create drupaldb
 	````
 
-1. Execute **mysql** command. At the MySQL prompt execute the following query. Replace **username** and **password** with your Virtual machine user account. This command grants permissions for your user in MySQL.
+1. Execute the following command to access the MySQL prompt.
+
+	````Linux
+	mysql
+	````
+
+   At the MySQL prompt execute the following query. Replace **username** and **password** with your Virtual machine user account. This command grants permissions for your user in MySQL.
 
 	````Linux
 	GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES	
@@ -304,7 +310,11 @@ In this task, you will install and configure a Drupal portal on your Windows Azu
 
 	_Granting permissions in MySQL_
 	
-   Exit the MySQL command prompt by typing **exit**.
+   Exit the MySQL command prompt by typing the following command.
+
+	````Linux
+	exit
+	````
 	
 1. Open Internet Explorer and locate the virtual machine DNS Name. Browse to _http://[YOUR-DNS-URL]/drupal_ to complete Drupal installation.
  
