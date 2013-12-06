@@ -120,7 +120,8 @@ The command opens an Internet Explorer window and a web page. The URL is https:/
 ---
 
 <a name="Exercise2" />
-### Exercise 2: Provision an HDInsight cluster (Important: Skip this exercise!)###
+### Exercise 2: Provision an HDInsight cluster ###
+### Important: Skip this exercise! Please check your emails for the HDInsight cluster details to use for Exercise 3. ###
 
 The HDInsight provision process requires a Windows Azure Storage account to be used as the default file system. The storage account must be located in the same data center as the HDInsight Service compute resources. Currently, you can only provision HDInsight clusters in the following data centers:
 
