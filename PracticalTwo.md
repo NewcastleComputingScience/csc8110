@@ -242,8 +242,10 @@ For more information, see [Using Windows Azure Blob Storage with HDInsight](http
 1. Run the following commands to create a MapReduce job definition:
 
 	````Linux
-	$wordCountJobDefinition = New-AzureHDInsightMapReduceJobDefinition -JarFile "wasb:///example/jars/hadoop-examples.jar" -ClassName "wordcount" -Arguments "wasb:///example/data/gutenberg/davinci.txt", "wasb:///example/data/WordCountOutput"
+	$wordCountJobDefinition = New-AzureHDInsightMapReduceJobDefinition -JarFile "wasb:///example/jars/hadoop-examples.jar" -ClassName "wordcount" -Arguments "wasb:///example/data/gutenberg/davinci.txt", "wasb:///example/data/WordCountOutput-[StudentId]"
 	````
+	
+> **Important:** Since you are sharing an HDInsight cluster with a number of other students, please ensure you replace **[StudentId]** with your Student number to prevent interference between yours and your colleagues' MapReduce tasks.
 	
    The hadoop-examples.jar file comes with the HDInsight cluster distribution. There are two arguments for the MapReduce job. The first one is the source file name, and the second is the output file path. The source file comes with the HDInsight cluster distribution, and the output file path will be created at the run-time.
 
@@ -302,7 +304,7 @@ For more information, see [Using Windows Azure Blob Storage with HDInsight](http
 1. Run the following command to download the MapReduce job output from the Blob container to the workstation:
 
 	````Linux
-	Get-AzureStorageBlobContent -Container $ContainerName -Blob example/data/WordCountOutput/part-r-00000 -Context $storageContext -Force
+	Get-AzureStorageBlobContent -Container $ContainerName -Blob example/data/WordCountOutput-[StudentId]/part-r-00000 -Context $storageContext -Force
 	````
 
    The *example/data/WordCountOutput* folder is the output folder specified when you run the MapReduce job. *part-r-00000* is the default file name for MapReduce job output. The file will be download to the same folder structure on the local folder. For example, in the following screenshot, the current folder is the C root folder. The file will be downloaded to the *C:\example\data\WordCountOutput* folder.
@@ -310,7 +312,7 @@ For more information, see [Using Windows Azure Blob Storage with HDInsight](http
 1. Run the following command to print the MapReduce job output file:
 
 	````Linux
-	cat ./example/data/WordCountOutput/part-r-00000 | findstr "there"
+	cat ./example/data/WordCountOutput-[StudentId]/part-r-00000 | findstr "there"
 	````
     
   ![MapReduce Job Output](Images/hdi.gettingstarted.mrjoboutput.png?raw=true)
