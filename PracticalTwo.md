@@ -100,7 +100,7 @@ The command opens an Internet Explorer window and a web page. The URL is https:/
    For example:
 
 	````Linux
-	Import-AzurePublishSettingFile "C:\Users\JohnDole\Desktop\Azure-8-30-2013-credentials.publishsettings"
+	Import-AzurePublishSettingsFile "C:\Users\JohnDole\Desktop\Azure-8-30-2013-credentials.publishsettings"
 	````
 
 1. Once the file is imported, you can use the following command to list your subscriptions:
