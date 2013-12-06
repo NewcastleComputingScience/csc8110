@@ -324,13 +324,13 @@ For more information, see [Using Windows Azure Blob Storage with HDInsight](http
 
 ---
 
-<a name='Shutdown' />
+<!--<a name='Shutdown' />
 ## Shutting down your HDInsight cluster ##
 
 The HDInsight cluster you have created as part of this practical session comprises a number of very high-performance VM instances, and consequently is charged at a high hourly rate. As a business or individual using MapReduce on Windows Azure, you would provision your HDInsight cluster only when it is in use, and shut down (deprovision) the cluster when it is not in use. At the end of the practical session, you can shut down your HDInsight machine by pressing the **Delete** button in your cluster's **Dashboard**.
 
 ---
-
+-->
 
 <a name='Summary' />
 ## Summary ##
