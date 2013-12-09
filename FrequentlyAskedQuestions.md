@@ -33,13 +33,11 @@ This can be located at the following URL.
 
 Add the following dependency to your pom.xml.
 
-    ````Linux
     <dependency>
         <groupId>com.microsoft.windowsazure</groupId>
         <artifactId>microsoft-windowsazure-api</artifactId>
         <version>0.4.6</version>
     </dependency>
-    ````
 
 #### Running JBoss on an Azure VM ####
 A number of students have encountered problems viewing their JBoss applications remotely, with JBoss running on their Azure VMs. To get JBoss running correctly on your VM you should
