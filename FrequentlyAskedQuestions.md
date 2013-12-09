@@ -28,6 +28,18 @@ A number of you have encountered issues locating the correct Jar file required f
 This can be located at the following URL.
 
     http://go.microsoft.com/fwlink/?linkid=253887&clcid=0x409
+    
+#### How can I use Azure SDK for Java in my Java project using Maven ####
+
+Add the following dependency to your pom.xml.
+
+    ````Linux
+    <dependency>
+        <groupId>com.microsoft.windowsazure</groupId>
+        <artifactId>microsoft-windowsazure-api</artifactId>
+        <version>0.4.6</version>
+    </dependency>
+    ````
 
 #### Running JBoss on an Azure VM ####
 A number of students have encountered problems viewing their JBoss applications remotely, with JBoss running on their Azure VMs. To get JBoss running correctly on your VM you should
