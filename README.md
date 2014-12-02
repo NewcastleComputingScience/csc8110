@@ -5,10 +5,13 @@ CSC8110 Cloud Computing
 
 [Practical One](PracticalOne.md)
 
+N.b. Additional practical materials will appear here shortly.
+
 ---
 ### Coursework Assignment ###
 
-[Coursework](CSC8110%20Coursework%20Assignment%202014-15.pdf)
+[Coursework Document](CSC8110%20Coursework%20Assignment%202014-15.pdf)
+[Presentation Slides](CSC8110%20Presentation%20Slides%202014-15.pdf)
 
 ---
 
