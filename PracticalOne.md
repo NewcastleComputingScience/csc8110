@@ -13,7 +13,7 @@ If you have any questions, do not hesitate to talk to the demonstrators during p
 <a name="Objectives" />
 ### Objectives ###
 
-In this practical session, you will: 
+In this practical session, you will: p
 
 - Familiarise yourself with the Windows Azure management portal
 - Create Linux virtual machines (VMs) in Windows Azure
@@ -61,7 +61,7 @@ In this exercise, you will learn how to provision a Linux Virtual Machine in the
 
    In the **Authentication** section, uncheck **Upload compatible ssh key for authentication** and check **Provide password**.
    
-   Provide a password for the **New Password** and **Confirm Password** fields.
+   Provide a password (use only alphanumeric characters, avoid any symbols, particularly hyphens) for the **New Password** and **Confirm Password** fields.
    
    Lastly, set the Virtual Machine **Size** to _A1_ and click **Next** to continue.
    
