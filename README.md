@@ -1,6 +1,6 @@
 CSC8110 Cloud Computing
 =======
-
+ 
 ### Practical Sessions ###
 
 [Practical One](PracticalOne.md)
