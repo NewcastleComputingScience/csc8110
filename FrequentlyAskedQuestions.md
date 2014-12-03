@@ -79,3 +79,48 @@ Add the following dependencies to your pom.xml to use the Azure SDK for Java in 
         <artifactId>azure-storage</artifactId>
         <version>1.3.1</version>
     </dependency>
+
+#### 
+
+A number of students encountered issues with their Maven builds saying that libraries (e.g. Commons CLI) were not recognised. Error messages when running your program from the jar may look like the following:
+
+    Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/commons/cli/Options
+            at org.cloudcomputing.Main.main(Main.java:24)
+    Caused by: java.lang.ClassNotFoundException: org.apache.commons.cli.Options
+            at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+            at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+            at java.security.AccessController.doPrivileged(Native Method)
+            at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+            at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+            at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+            at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+            ... 1 more
+            
+This occurs because the dependencies you specify in your pom.xml file are not on the class path when you run your application. This can easily be solved by adding the following to your pom.xml file to create a "fat jar" - a jar file containing all dependencies.
+
+    <plugin>
+      <artifactId>maven-assembly-plugin</artifactId>
+      <configuration>
+        <archive>
+          <manifest>
+            <mainClass>fully.qualified.MainClass</mainClass>
+          </manifest>
+        </archive>
+        <descriptorRefs>
+          <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
+      </configuration>
+      <executions>
+        <execution>
+          <id>make-assembly</id> <!-- this is used for inheritance merges -->
+          <phase>package</phase> <!-- bind to the packaging phase -->
+          <goals>
+            <goal>single</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+
+You should change ```fully.qualified.MainClass``` to the full package and class name of the default main method you wish to be called when you run your Jar file.
+
+For more information please see the following [StackOverflow article](http://stackoverflow.com/questions/574594/how-can-i-create-an-executable-jar-with-dependencies-using-maven).
