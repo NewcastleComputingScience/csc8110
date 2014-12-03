@@ -22,6 +22,11 @@ None (yet).
 
 <a name="Coursework" />
 ### Coursework###
+
+
+#### Should the Point of Sale (POS) application also store all customers/orders locally? ####
+
+Your Point of Sale (POS) application does _not_ need to store all customers/orders locally. Data storage may be entirely cloud-based with one exception - if someone attempts to create a customer or order while there is no working internet connection, these customer(s)/order(s) should be stored locally and an attempt made to resend them when the internet connection comes back online.
     
 #### How can I use Azure SDK for Java in my Java project using Maven? ####
 
