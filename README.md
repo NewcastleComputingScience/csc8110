@@ -3,7 +3,9 @@ CSC8110 Cloud Computing
  
 ### Practical Sessions ###
 
-[Practical One -  Introduction to Windows Azure Virtual Machines (Linux)](PracticalOne.md)
+[Practical One - Introduction to Windows Azure Virtual Machines (Linux)](PracticalOne.md)
+
+[Practical Two - How to use Table Storage from Java](PracticalTwo.md)
 
 N.b. Additional practical materials will appear here shortly.
 
