@@ -80,7 +80,7 @@ Add the following dependencies to your pom.xml to use the Azure SDK for Java in 
         <version>1.3.1</version>
     </dependency>
 
-#### 
+#### Dependencies not found when running Jar ####
 
 A number of students encountered issues with their Maven builds saying that libraries (e.g. Commons CLI) were not recognised. Error messages when running your program from the jar may look like the following:
 
