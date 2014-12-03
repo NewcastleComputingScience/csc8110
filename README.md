@@ -3,7 +3,7 @@ CSC8110 Cloud Computing
  
 ### Practical Sessions ###
 
-[Practical One](PracticalOne.md)
+[Practical One -  Introduction to Windows Azure Virtual Machines (Linux)](PracticalOne.md)
 
 N.b. Additional practical materials will appear here shortly.
 
