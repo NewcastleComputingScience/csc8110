@@ -31,7 +31,9 @@ __Suggestion:__ Service Bus Queues offer a number of very useful features over n
 
 ---
 
-[Practical 6: How to run a compute-intensive task in Java on a virtual machine](PracticalSix.md) (Assumes use of Service Bus Queues)
+[Practical Six: How to run a compute-intensive task in Java on a virtual machine](PracticalSix.md) (Assumes use of Service Bus Queues)
+
+[Practical Seven: How to Use Azure SQL Database in Java](PracticalSeven.md)
 
 N.b. Additional practical materials will appear here shortly.
 
