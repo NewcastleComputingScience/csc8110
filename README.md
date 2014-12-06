@@ -13,6 +13,8 @@ In your implementation you have a choice of whether to make use of Azure Queue S
 
 A comparison of each technology may be found at [Azure Queues and Service Bus Queues - Compared and Contrasted](http://msdn.microsoft.com/en-us/library/azure/hh767287.aspx). 
 
+Once you have made a decicision on which queue approach to use, please follow the appropriate tutorials for the technology of your choice.
+
 For Azure Queue storage, use Practical Three:
 
 [Practical Three - How to use Queue Storage from Java](PracticalThree.md)
