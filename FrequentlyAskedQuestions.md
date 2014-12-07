@@ -27,6 +27,18 @@ None (yet).
 #### Should the Point of Sale (POS) application also store all customers/orders locally? ####
 
 Your Point of Sale (POS) application does _not_ need to store all customers/orders locally. Data storage may be entirely cloud-based with one exception - if someone attempts to create a customer or order while there is no working internet connection, these customer(s)/order(s) should be stored locally and an attempt made to resend them when the internet connection comes back online.
+
+#### How can I use Apache Commons CLI in my Java project using Maven? ####
+
+If you are using Java as your chosen language for your implementation, you are strongly encouraged to make good use of build tools such as Maven.
+
+Add the following dependencies to your pom.xml to use the Apache Commons CLI in your Maven project.
+
+    <dependency>
+        <groupId>commons-cli</groupId>
+        <artifactId>commons-cli</artifactId>
+        <version>1.2</version>
+    </dependency>
     
 #### How can I use Azure SDK for Java in my Java project using Maven? ####
 
