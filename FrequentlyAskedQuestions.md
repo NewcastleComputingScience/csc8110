@@ -141,3 +141,13 @@ This occurs because the dependencies you specify in your pom.xml file are not on
 You should change ```fully.qualified.MainClass``` to the full package and class name of the default main method you wish to be called when you run your Jar file.
 
 For more information please see the following [StackOverflow article](http://stackoverflow.com/questions/574594/how-can-i-create-an-executable-jar-with-dependencies-using-maven).
+
+#### How should I handle dates in Java? ####
+
+You may handle dates in your application however you see fit, but I strongly suggest making use of [Joda Time](http://www.joda.org/joda-time/) which provides a number of benefits over Java's built-in date and time support. This may be included in your project by adding the following dependency to your pom.xml file.
+
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>2.6</version>
+    </dependency>
