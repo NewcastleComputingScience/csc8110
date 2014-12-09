@@ -12,3 +12,5 @@ If there is something you would like to appear on this page, don't hesitate to c
 ---
 
 [Azure Storage SDK Sample Applications](https://github.com/Azure/azure-storage-java/tree/master/microsoft-azure-storage-samples)
+
+[StackOverflow thread: "Azure queue - can I verify a message will be read only once?"](http://stackoverflow.com/questions/13601515/azure-queue-can-i-verify-a-message-will-be-read-only-once)
