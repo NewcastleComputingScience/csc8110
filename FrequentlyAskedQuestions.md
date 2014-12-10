@@ -151,3 +151,7 @@ You may handle dates in your application however you see fit, but I strongly sug
       <artifactId>joda-time</artifactId>
       <version>2.6</version>
     </dependency>
+
+#### What should I use as my partition key for 4.3 Management Report C? ####
+
+Hint: [Stackoerflow article: Get the number of days, weeks, and months, since Epoch in Java](http://stackoverflow.com/questions/6158053/get-the-number-of-days-weeks-and-months-since-epoch-in-java)
