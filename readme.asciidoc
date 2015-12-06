@@ -17,7 +17,7 @@ The following document (and accompanying presentation slides) outline the requir
 
 link:./coursework.asciidoc[View the coursework document]
 
-link:./csc8110coursework201516.pdf[View the presentation slides]
+link:./csc8110coursework201516.pdf[View the presentation slides] (Available soon)
 
 == Online Resources
 
