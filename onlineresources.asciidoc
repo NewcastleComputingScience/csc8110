@@ -2,8 +2,28 @@
 
 This page will be updated regularly by CSC8110 demonstrators to include answers to frequently asked questions and solutions to any issues encountered by students.
 
-If there is something you would like to appear on this page, don't hesitate to contact Matthew Forshaw (mailto:matthew.forshaw@ncl.ac.uk[matthew.forshaw@ncl.ac.uk])  and he will update the page accordingly.
+If there is something you would like to appear on this page, don't hesitate to contact Matthew Forshaw (mailto:matthew.forshaw@ncl.ac.uk[matthew.forshaw@ncl.ac.uk]) and he will update the page accordingly.
 
 '''
 
 link:https://azure.microsoft.com/en-gb/documentation/articles/virtual-machines-command-line-tools/[Using the Azure CLI for Mac, Linux, and Windows with Azure Service Management]
+
+'''
+
+== Maven and Version Control
+
+If you would like to use Maven or Version Control in your coursework, but haven't had much experience of this in the past, the following links provide step-by-step guides to performing their basic operations:
+
+'''
+=== Version Control
+
+link:https://git-scm.com/book/en/v2[Pro Git v2] (Great introductory book, avilable online for free, by Scott Chacon and Ben Straub. Chapters 1 and 2 are useful for an introduction!)
+
+link:http://homepages.cs.ncl.ac.uk/matthew.forshaw/teaching/csc8622/versioncontrol/[Version Control with Git] (Practical)
+
+'''
+=== Maven
+
+link:http://books.sonatype.com/mvnex-book/reference/simple-project-sect-create-simple.html[Creating a Simple Project in Maven]
+
+NOTE: In the Maven tutorial, the first command typed spans four lines, with the '\' symbol denoting a new-line.
