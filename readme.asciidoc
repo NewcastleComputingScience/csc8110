@@ -1,24 +1,16 @@
 = CSC8110 Cloud Computing Coursework
 
-This coursework covers the development of an enterprise application using Java EE technologies deployed to a PaaS cloud. 
-The coursework is designed to give students hands on experience with building enterprise applications.
-Furthermore, all the technologies used are production grade, given the students the experience and knowledge they need to build a real enterprise application.
-
-NOTE: This coursework was produced by Newcastle University (UK) in conjunction with Red Hat. It's available under an Open Source licence.
-However, the exact licence is still to be decided.
+TODO: Introduction section.
 
 
-== Tutorial
-There are a number of 
+== Tutorials
+There are a number of tutorials to guide you in your use of the various Microsoft Azure technologies you will use in this coursework.
 
 link:https://azure.microsoft.com/en-gb/documentation/articles/virtual-machines-linux-tutorial-portal-rm/[Practical One: Creating a Virtual Machine using Linux]
 
-link:https://azure.microsoft.com/en-gb/documentation/articles/storage-java-how-to-use-table-storage/[Practical y: How to use Table storage from Java]
+link:https://azure.microsoft.com/en-gb/documentation/articles/service-bus-java-how-to-use-topics-subscriptions/[Practical Two: How to use Azure Service Bus topics and subscriptions]
 
-link:https://azure.microsoft.com/en-gb/documentation/articles/service-bus-java-how-to-use-topics-subscriptions/[Practical x: How to use Azure Service Bus topics and subscriptions]
-
-
-link:./tutorial.asciidoc[View the tutorial document]
+link:https://azure.microsoft.com/en-gb/documentation/articles/storage-java-how-to-use-table-storage/[Practical Three: How to use Table storage from Java]
 
 == Coursework
 The following document (and accompanying presentation slides) outline the requirements of the CSC8110 Cloud Computing assignment.
