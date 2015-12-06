@@ -20,16 +20,16 @@ TODO: Description of ANPR Scenario, with diagram.
 
 *Building your work* 
 ==========================
-For this project, if you use Java, you are advised to use a link:http://maven.apache.org/[Maven] build for your application.
+For this project, if you use Java, you are advised to use a link:http://maven.apache.org/[Maven] build for your application. Maven will assist you in managing your 'dependencies' on the Azure SDK, and will simplify the production of a JAR file so you can run your application on the Cloud.
 ==========================
 
 *Storing your work*
 ==========================
-You *must* save your work using the link:http://git-scm.com/[Git] version control system, regularly commiting changes and pushing to the provided link:http://github.com/[Github] repositoy.  
+You *must* save your work using the link:http://git-scm.com/[Git] version control system, regularly commiting changes and pushing to the provided private link:http://github.com/[Github] repository.  
 
 You should push commits of your coursework regularly to your GitHub repo. It is a good idea to do so every time you get a small piece of functionality working. This ensures that you can move back to a working state if you get in a mess. It also ensures that you have a backup and that the demonstrators can view your code and track progress.
 
-TIP: You will be awarded a considerable number of marks for your distribution and use of version control. We expect to see a steady flow of sensible commits to Github over the coursework period.
+TIP: You will be awarded a considerable number of marks for your use of version control. We expect to see a steady flow of sensible commits to Github over the coursework period.
 ==========================
 
 
@@ -110,7 +110,11 @@ NOTE: Unlike relational databases, NoSQL does not support JOIN statements, so yo
 
 == Part 5: Vehicle Check (+ Auto-Scaling in Azure)
 
-So far in this assignment we have considered simple message consumers which run quickly. We now wish to extend our application to perform checks on vehicles, a process which we can assume will take a number of seconds per vehicle. In this situation, a single Vehicle Check application may struggle to satisfy demand when there are a high volume of requests to satisfy. In this section we will create a simple 'Vehicle Check' application, and use this to explore the Aut-Scaling in Azure to dynamically provision additional Vehicle Check applications to satisfy demand.
+So far in this assignment we have considered simple message consumers which are capable of processing messages (vehicle sightings) quickly. 
+
+We now wish to extend our application to perform checks on vehicles, a process which we can assume will take a number of seconds per vehicle. In this situation, a single Vehicle Check application may struggle to satisfy demand when there are a high volume of requests to satisfy. 
+
+In this section we will create a simple 'Vehicle Check' application, and use this to explore the use of Auto-Scaling in Azure to dynamically provision additional Vehicle Check applications to satisfy demand.
 
 *Task 1:* Create a small program which simulates the time-consuming process of performing a vehicle check based on a vehicle registration. 
 
@@ -123,9 +127,17 @@ public static boolean isVehicleStolen(String vehicleRegistration)
     return (Math.random() < 0.95)
 }
 
-*Task 2:* You have now been asked to persit the results of your vehicle checks in a *Relational* database for auditing purposes. You should now extend your Vehicle Check application to persist the results of your Vehicle Checks in a *TODO: Link to SQL datastore on Azure*.
+Test your application (running a single instance of the Vehicle Check), and demonstrate that due to the long-running task it is unable to cope with large volumes of requests in a timely manner.
 
-*Task 3:* Select a realistic query of *your* choice, and extend the Query Application from Part 3 to interact withe MS SQL Server database and perform the query.
+*Task 2:* Experiment with the use of auto-scaling in Azure, to run your Vehicle Check application in the cloud and configure it to automatically respond to increased rate of requests.
+
+NOTE: Further tutorial guidance will be provided here throughout the first week of practicals.
+
+Re-run your application and observe Azure auto-scaling your application in response to the number (and traffic rate) of Smart Speed Cameras active in your system.
+
+*Task 3:* You have now been asked to persit the results of your vehicle checks in a *Relational* database for auditing purposes. You should now extend your Vehicle Check application to persist the results of your Vehicle Checks in a *TODO: Link to SQL datastore on Azure*.
+
+*Task 4:* Select a realistic query of *your* choice, and extend the Query Application from Part 3 to interact withe MS SQL Server database and perform the query.
 
 == Submission Guidelines
 
