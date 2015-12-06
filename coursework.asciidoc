@@ -1,0 +1,151 @@
+= CSC8110 Cloud Computing Coursework
+
+== Outline
+//This coursework is designed to give you experience building Java EE 6 applications and deploying them to the Cloud. You will build a real-world application using real enterprise technologies. This coursework provides you with an opportunity to work on an entire application, from the data-storage through to the web frontend. As a result you will need to become familiar with a wide range of technologies. It is important that you start the work early and ask for help when needed. By completing this coursework, you will gain some useful experience and skills.
+
+//We consider the scenario of a network of Smart Speed Cameras, 
+TODO: Description of ANPR Scenario, with diagram.
+
+//== Technologies
+//This coursework covers a large number of technologies. The challenge here is to learn the right bits of each technology in order to complete the coursework.
+//
+//* *Arquillian*. With this tool you will be able to write tests that run inside the application server.
+//* *Maven*. Your application will be built and deployed with this tool.
+//* *Azure*. This is the Platform as a Service (PaaS) that you will use to deploy your application to the Cloud.
+//* *Git*. This is a distributed version control system and will be used to backup your code and for deploying it to OpenShift.
+//* *AZURE STUFF HERE*. This is a distributed version control system and will be used to backup your code and for deploying it to OpenShift.
+ 
+== Project Requirements
+
+
+*Building your work* 
+==========================
+For this project, if you use Java, you are advised to use a link:http://maven.apache.org/[Maven] build for your application.
+==========================
+
+*Storing your work*
+==========================
+You *must* save your work using the link:http://git-scm.com/[Git] version control system, regularly commiting changes and pushing to the provided link:http://github.com/[Github] repositoy.  
+
+You should push commits of your coursework regularly to your GitHub repo. It is a good idea to do so every time you get a small piece of functionality working. This ensures that you can move back to a working state if you get in a mess. It also ensures that you have a backup and that the demonstrators can view your code and track progress.
+
+TIP: You will be awarded a considerable number of marks for your distribution and use of version control. We expect to see a steady flow of sensible commits to Github over the coursework period.
+==========================
+
+
+== Part 1: Smart Speed Camera
+
+*Task 1:* You will first create a program in Java (or a programming language of your choice) to _simulate_ a Smart Speed Camera, equipped with Automatic Number Plate Recognition (ANPR) technology.
+
+Your Smart Speed Camera should have the following properties. These may either be passed to the command line as command line arguments, or read from a properties or configuration file, but must *not* be hard coded into your application.
+
+* Unique Identifier
+* Street Name
+* Town/City
+* Maximum speed limit for the area they monitor
+
+Your Smart Speed Camera must provide the following functionality:
+
+* Every time your Smart Speed Camera starts up, it should inform (by adding a message to the Azure Service Bus Topic) the rest of the system of its Unique Identifer, Street Name, Town/City, Maximum speed limit for the area they monitor, and the date and time (timestamp) the Smart Speed Camera started up.
+
+NOTE: In addition to Smart Speed Cameras located at fixed locations, cameras may be mounted within police vehicles and change location over time. Similarly, it is possible that the speed limit for an area monitored by a Smart Speed Camera may change over time (for example, due to poor weather conditions). You may assume in the case of a change in Maximum speed limit that the camera will be restarted.
+
+* Your program should simulate vehicles passing the camera, and generate random (but realistic!) information. Each time a vehicle passes the camera, the following information is recorded.
+
+  - Vehicle registration plate _(e.g. 'BD51 SMR', 'LA51 ABC', 'LL51 JMB')_
+  - Vehicle type (Car, Truck, Motorcycle)
+  - Current speed of travel
+  - Details of the speed camera which made the sighting.
+  
+* Your program should send these details to an Azure Service Bus Topic for later processing in Task 2.
+
+*Task 2 - Vehicle Rate:* You should also provide into your application (as a command line argument, or from a configuration file) an expected rate of traffic (expressed as "number of vehicles per minute"). This should specify the rate that vehicle sightings are produced by your Smart Speed Camera; controlling the rate of messages produced.
+
+*Task 3 - Offline operation:* It should be possible for your Smart Speed Camera application to operate when an internet connection is not available. You should develop your Smart Speed Camera application so it is capable of storing messages in-memory (e.g. in an array, Collection, or other data structure of your choice), to be sent when an internet connection is re-established.
+
+NOTE: We expect you will run multiple instances of your Smart Speed Camera application on your local machine, to simulate a network of Smart Speed Cameras distributed through a *town/city*.
+
+== Part 2: NoSQL Consumer
+
+You will then create a _'NoSQL Consumer'_ which retreives messages from your queue and stores the details of customers and orders in a NoSQL data store. In this coursework we will be Azure's Table Storage, a scalable datastore for the storage and querying of structured, non-relational data. 
+
+NOTE: A full description of the Azure Table Storage service, instructions for creating a storage account from the Azure Management Portal, and Java source code examples can be found in the practical material.
+
+Your NoSQL Consumer should provide the following functionality:
+
+* Your NoSQL Consumer should execute continuously, periodically checking the queue for incoming messages.
+
+* Sightings of vehicles, and registrations of Smart Speed Cameras, should be persisted to two _separate_ tables.
+
+
+== Part 3: Query Application
+
+Now we have begun to persist data to our database (in Azure Table Storage), we are interested to be able to query this data to produce some interesting insights.
+
+You should now create an application which queries your database to answer the following questions:
+
+* *Query One:* Produce a list of all Smart Speed Cameras registered in the system, including the details of their ID, Street Name, Town/City, and Speed Limit.
+
+NOTE: You will likely have multiple registrations for a particular Smart Speed Camera. 
+
+//* *Query Two:* Produce a list of all vehicle sightings for a particular unique location (Street Name, and Town/City).
+
+
+As we progress in the coursework assignment, we will extend this program to perform additional queries.
+
+== Part 4: Police Monitor
+
+The police are now interested in obtaining the details of any sightings where a vehicle is travelling over the speed limit. 
+
+*Task 1:* Write another worker application which makes use of the Subscriptions with Filters feature of Azure Service Bus to retreive only sightings where a vehicle has exceeded the speed limit for a camera. Your program should print the details of any such sightings to the terminal.
+
+NOTE: "Create subscriptions with filters" in https://azure.microsoft.com/en-gb/documentation/articles/service-bus-java-how-to-use-topics-subscriptions/#create-subscriptions
+
+*Task 2:* It is well understood that Smart Speed Cameras may provide inaccurate results by up to 10%. Update your Police Monitor to specify whether the observed speed is greater than the speed limit by 10%. Your application should indicate any sightings which exceed the speed limit by more than 10%, by adding "PRIORITY" to your terminal output for that entry.
+
+*Task 3:* Update your Police Monitor to persist the details of any vehicles caught speeding (including whether they are a priority or non-priority sighting) into a new table "SpeedingVehicles" in Azure Table storage.
+
+*Task 4:* Extend the Query application you began developing in Part 3, to provide an additional query. *Query Two:* This query should produce a list of all historical sightings of vehicles caught speeding and considered a "PRIORITY" (taken from the table you create in Task 3).
+
+NOTE: Unlike relational databases, NoSQL does not support JOIN statements, so you will need to execute multiple queries against your NoSQL data store and perform the JOIN between _SpeedingVehicles_ and _Sightings_ programmatically within your application logic.
+
+== Part x: Auto-Scaling in Azure
+
+So far in this assignment we have considered simple message consumers which run quickly. We now wish to extend our application to perform checks on vehicles, a process which we can assume will take a number of seconds per vehicle.
+
+*Task 1:* Create a small program which simulates the time-consuming process of performing a vehicle check based on a vehicle registration.
+
+[source,java,numbered]
+public static boolean isVehicleStolen(String vehicleRegistration)
+{
+    Thread.sleep(5000);
+    return (Math.random() < 0.95)
+}
+
+*Task 2:* You have now been asked to persit the results of your vehicle checks in a *Relational* database for auditing purposes. You should now extend your Vehicle Check application to persist the results of your Vehicle Checks in a *TODO: Link to SQL datastore on Azure*.
+
+*Task 3:* Select a realistic query of *your* choice, and extend the Query Application from Part 3 to interact withe MS SQL Server database and perform the query.
+
+== Submission Guidelines
+
+=== Demonstration
+Prior to submission you will provide a 10-15 minute demonstration to one of the Course Demonstrators. You will be expected to describe your technical solution and discuss your personal experiences throughout the project. 
+
+A sign-up sheet for demonstration slots will be made available in the Computer clusters at the start of the second week of practical sessions.
+
+=== Coursework submission
+You must submit all work via the coursework submission system (NESS).
+This should constitute a zip file containing the project source code and Maven build scripts. We will use this zip file to test your submission, so it should contain everything necessary to build and test your project.
+
+You should also submit a short report via NESS (roughly three pages) summarising the work carried out on this project, and an evaluation of how much you achieved. We are particularly interested in any assumptions you made, and how they motivated particular design decisions. You should also provide a brief discussion of your personal experience of the development process; e.g. which aspects of the project did you find particularly easy/hard?
+
+We have provided a list of things you should cover in your report in the "Report Hints" sections of this document.
+
+== Finally
+Demonstrators will be available in your cluster rooms during all practical sessions. You should go and see them if you are having any difficulties. This includes understanding what you have to do.
+
+Discussion Boards will also be available for CSC8110 in Blackboard (http://bb.ncl.ac.uk). You may post any questions about the tutorial or coursework assignment here, and the discussion boards will be monitored by Course Demonstrators. Before posting you should use the discussion boards' search facilities to see if somebody has already encountered the same problem.
+Also frequently asked questions will be posted by demonstrators link:https://github.com/NewcastleComputingScience/csc8104-assignment/blob/master/frequentlyaskedquestions.asciidoc[here].
+
+TIP: If you see a question on the discussion boards you know how to answer, we strongly encourage you to assist your colleagues!
+

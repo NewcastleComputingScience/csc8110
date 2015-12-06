@@ -1,0 +1,9 @@
+= Online Resources
+
+This page will be updated regularly by CSC8110 demonstrators to include answers to frequently asked questions and solutions to any issues encountered by students.
+
+If there is something you would like to appear on this page, don't hesitate to contact Matthew Forshaw (mailto:matthew.forshaw@ncl.ac.uk[matthew.forshaw@ncl.ac.uk])  and he will update the page accordingly.
+
+'''
+
+link:https://azure.microsoft.com/en-gb/documentation/articles/virtual-machines-command-line-tools/[Using the Azure CLI for Mac, Linux, and Windows with Azure Service Management]

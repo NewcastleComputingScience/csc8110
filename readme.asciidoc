@@ -1,0 +1,48 @@
+= CSC8110 Cloud Computing Coursework
+
+This coursework covers the development of an enterprise application using Java EE technologies deployed to a PaaS cloud. 
+The coursework is designed to give students hands on experience with building enterprise applications.
+Furthermore, all the technologies used are production grade, given the students the experience and knowledge they need to build a real enterprise application.
+
+NOTE: This coursework was produced by Newcastle University (UK) in conjunction with Red Hat. It's available under an Open Source licence.
+However, the exact licence is still to be decided.
+
+
+== Tutorial
+There are a number of 
+
+link:https://azure.microsoft.com/en-gb/documentation/articles/virtual-machines-linux-tutorial-portal-rm/[Practical One: Creating a Virtual Machine using Linux]
+
+link:https://azure.microsoft.com/en-gb/documentation/articles/storage-java-how-to-use-table-storage/[Practical y: How to use Table storage from Java]
+
+link:https://azure.microsoft.com/en-gb/documentation/articles/service-bus-java-how-to-use-topics-subscriptions/[Practical x: How to use Azure Service Bus topics and subscriptions]
+
+
+link:./tutorial.asciidoc[View the tutorial document]
+
+== Coursework
+The following document (and accompanying presentation slides) outline the requirements of the CSC8110 Cloud Computing assignment.
+
+link:./coursework.asciidoc[View the coursework document]
+
+link:./csc8110coursework201516.pdf[View the presentation slides]
+
+== Online Resources
+
+A number of online resources which you may find useful in completing this coursework, may be found at the following link.
+
+link:./onlineresources.asciidoc[Online Resources]
+
+
+== Frequently Asked Questions (FAQs)
+A live document containing Frequently Asked Quesitons (FAQs) will be maintained at the following link. If you are encountering difficulties completing the coursework assignment, please check the following link to see if your issue has already been answered.
+
+link:./frequentlyaskedquestions.asciidoc[View the Frequently Asked Questions document]
+
+== Course Demonstrating Team
+
+|=======
+| Firstname Lastname | Firstname Lastname | Firstname Lastname | Firstname Lastname | Firstname Lastname
+|image:images/demonstrators/1.jpg["Part 1 architechture diagram",align="center"] |image:images/demonstrators/PeterMichalak.jpg["Part 1 architechture diagram",align="center"] |image:images/demonstrators/SalehMohamed.jpg["Part 1 architechture diagram",align="center"] |image:images/demonstrators/3.jpg["Part 1 architechture diagram",align="center"] |image:images/demonstrators/4.jpg["Part 1 architechture diagram",align="center"]
+| Description | *Peter Michalak* graduated with a bachelor degree in Computer Engineering from University of Zilina, Slovakia and a double degree in Software Engineering from University of Jyväskylä, Finland. After his studies he worked as a Software developer in Tieto Finland Oy, an IT company, in R&D department developing Telco grade cloud solutions. Currently, Peter is a PhD student in CDT Cloud Computing for Big Data, Digital Institute at Newcastle University, with focus on distributed stream management systems for healthcare data. | *Saleh Mohamed* received his BSc (Hons) in Computing Science (Security and Resilience) from Newcastle University in 2013. In 2014 he received his MSc in Cloud Computing from the same University. Saleh is currently a PhD student at EPSRC Centre for Doctoral Training in Cloud Computing for Big Data at Newcastle University under the supervision of Dr. Nigel Thomas, Dr. Matthew Forshaw and Dr. Sarah Heaps. His current research is mainly in the area of Big Data, looking specifically at automatic generation of run-time infrastructure for Internet of Things (IoT) from high-level, declarative description of a computation. | Description | Description |
+|=======

@@ -1,0 +1,13 @@
+= Frequently asked Questions
+
+This page will be updated regularly by CSC8110 demonstrators to include answers to frequently asked questions and solutions to any issues encountered by students.
+
+If you are encountering an issue and cannot find a solution here, please do not hesitate to contact a demonstrator during the practical sessions, or post to the relevant forum on the Blackboard discussion boards.
+
+If there is something you would like to appear on this page, don't hesitate to contact Matthew Forshaw (mailto:matthew.forshaw@ncl.ac.uk[matthew.forshaw@ncl.ac.uk])  and he will update the page accordingly.
+
+== Practical Tutorials
+None (yet).
+
+== Coursework
+None (yet).
