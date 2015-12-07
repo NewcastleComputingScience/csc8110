@@ -131,9 +131,9 @@ Test your application (running a single instance of the Vehicle Check), and demo
 
 *Task 2:* Experiment with the use of auto-scaling in Azure, to run your Vehicle Check application in the cloud and configure it to automatically respond to increased rate of requests.
 
-NOTE: See "How to Autoscale an Application" and in particular the "Queue Message" section at https://azure.microsoft.com/en-gb/documentation/articles/cloud-services-how-to-scale/
-
 At present, Azure Service Bus Topics do not support scaling based on queue length, so you will have to update your Police Monitor application to forward messages relating to speeding cars to an Azure Queue for further processing, and update your Vehicle Check application to retrieve messages from that queue.
+
+NOTE: See "How to Autoscale an Application" and in particular the "Queue Message" section at https://azure.microsoft.com/en-gb/documentation/articles/cloud-services-how-to-scale/
 
 NOTE: Further tutorial guidance will be provided here throughout the first week of practicals.
 
