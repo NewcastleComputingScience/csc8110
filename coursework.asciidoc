@@ -127,17 +127,27 @@ public static boolean isVehicleStolen(String vehicleRegistration)
     return (Math.random() < 0.95)
 }
 
-Test your application (running a single instance of the Vehicle Check), and demonstrate that due to the long-running task it is unable to cope with large volumes of requests in a timely manner.
+Test your application (running a single instance of the Vehicle Check), and demonstrate that due to the long-running nature of the task, it is unable to cope with large volumes of requests in a timely manner.
 
 *Task 2:* Experiment with the use of auto-scaling in Azure, to run your Vehicle Check application in the cloud and configure it to automatically respond to increased rate of requests.
+
+NOTE: See "How to Autoscale an Application" and in particular the "Queue Message" section at https://azure.microsoft.com/en-gb/documentation/articles/cloud-services-how-to-scale/
+
+At present, Azure Service Bus Topics do not support scaling based on queue length, so you will have to update your Police Monitor application to forward messages relating to speeding cars to an Azure Queue for further processing, and update your Vehicle Check application to retrieve messages from that queue.
 
 NOTE: Further tutorial guidance will be provided here throughout the first week of practicals.
 
 Re-run your application and observe Azure auto-scaling your application in response to the number (and traffic rate) of Smart Speed Cameras active in your system.
 
-*Task 3:* You have now been asked to persit the results of your vehicle checks in a *Relational* database for auditing purposes. You should now extend your Vehicle Check application to persist the results of your Vehicle Checks in a *TODO: Link to SQL datastore on Azure*.
+== Part 6: Relational Databases in Azure (Extra Credit)
 
-*Task 4:* Select a realistic query of *your* choice, and extend the Query Application from Part 3 to interact withe MS SQL Server database and perform the query.
+So far in this assignment we have considered persisting data to Azure's Table Storage. It is also possible to run full relational database systems (RDBMS) in Azure, through its Managed relational database-as-a-service offerings, offering high availability and scalability.
+
+In this _Extra Credit_ section of the assignment, we explore the use of Azure SQL Database to extend our scenario, to persist messages to a SQL Database running in the cloud, and perform a query against this database.
+
+*Task 1:* You have now been asked to persit the results of your vehicle checks in a *Relational* database for auditing purposes. You should now extend your Vehicle Check application to persist the results of your Vehicle Checks in an Azure SQL Database.
+
+*Task 2:* Select a realistic query of *your choice*, and extend the Query Application from Part 3 to interact withe MS SQL Server database and perform the query.
 
 == Submission Guidelines
 
