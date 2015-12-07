@@ -183,7 +183,7 @@ You should also submit a short report via NESS (roughly three pages) summarising
 Demonstrators will be available in your cluster rooms during all practical sessions. You should go and see them if you are having any difficulties. This includes understanding what you have to do.
 
 Discussion Boards will also be available for CSC8110 in Blackboard (http://bb.ncl.ac.uk). You may post any questions about the tutorial or coursework assignment here, and the discussion boards will be monitored by Course Demonstrators. Before posting you should use the discussion boards' search facilities to see if somebody has already encountered the same problem.
-Also frequently asked questions will be posted by demonstrators link:https://github.com/NewcastleComputingScience/csc8104-assignment/blob/master/frequentlyaskedquestions.asciidoc[here].
+Also frequently asked questions will be posted by demonstrators link:https://github.com/NewcastleComputingScience/csc8110/blob/master/frequentlyaskedquestions.asciidoc[here].
 
 TIP: If you see a question on the discussion boards you know how to answer, we strongly encourage you to assist your colleagues!
 
