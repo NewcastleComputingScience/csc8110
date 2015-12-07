@@ -1,9 +1,6 @@
 = CSC8110 Cloud Computing Coursework
 
 == Outline
-This coursework is designed to give you experience building Java EE 6 applications and deploying them to the Cloud. You will build a real-world application using real enterprise technologies. This coursework provides you with an opportunity to work on an entire application, from the data-storage through to the web frontend. As a result you will need to become familiar with a wide range of technologies. It is important that you start the work early and ask for help when needed. By completing this coursework, you will gain some useful experience and skills.
-
-//We consider the scenario of a network of Smart Speed Cameras, 
 In this coursework we will consider the scenario of a network of "Smart Speed Cameras", equipped with Automatic Number Plate Recognition software. Newcastle City Council wish to scale the processing of this speed camera data into the Cloud. This coursework provides you with the opportunity to develop an entire Cloud-based system, connected using Azure's Service Bus brokering system. As a result you will need to become familiar with a wide range of technologies. It is important that you start the work early and ask for help when needed. By completing this coursework, you will gain some useful experience and skills.
 
 === Aims
