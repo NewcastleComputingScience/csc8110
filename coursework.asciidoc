@@ -67,7 +67,7 @@ NOTE: We expect you will run multiple instances of your Smart Speed Camera appli
 
 == Part 2: NoSQL Consumer
 
-You will then create a _'NoSQL Consumer'_ which retreives messages from your queue and stores the details of customers and orders in a NoSQL data store. In this coursework we will be Azure's Table Storage, a scalable datastore for the storage and querying of structured, non-relational data. 
+You will then create a _'NoSQL Consumer'_ which retrieves messages from your queue and stores the details of customers and orders in a NoSQL data store. In this coursework we will be using Azure's Table Storage, a scalable datastore for the storage and querying of structured, non-relational data. 
 
 NOTE: A full description of the Azure Table Storage service, instructions for creating a storage account from the Azure Management Portal, and Java source code examples can be found in the practical material.
 
@@ -77,6 +77,9 @@ Your NoSQL Consumer should provide the following functionality:
 
 * Sightings of vehicles, and registrations of Smart Speed Cameras, should be persisted to two _separate_ tables within Azure's Table Storage.
 
+* In Azure, as with many Cloud providers, you are charged based on the number of requests you make against a particular service. For example, it would be wasteful to continue polling the Service Bus Topic repeatedly, even when there are only few messages in the system. Consider an approach to handle this issue, and update your NoSQL Consumer to implement this. You will want to discuss your design decisions here, as part of your written report.
+
+//Expbkf
 
 == Part 3: Query Application
 
@@ -135,6 +138,8 @@ At present, Azure Service Bus Topics do not support scaling based on queue lengt
 
 NOTE: See "How to Autoscale an Application" and in particular the "Queue Message" section at https://azure.microsoft.com/en-gb/documentation/articles/cloud-services-how-to-scale/
 
+NOTE: Remember, you will want to configure your application to start when your Virtual Machine is created. Ubuntu link:http://upstart.ubuntu.com/[upstart] is a great place to start.
+
 NOTE: Further tutorial guidance will be provided here throughout the first week of practicals.
 
 Re-run your application and observe Azure auto-scaling your application in response to the number (and traffic rate) of Smart Speed Cameras active in your system.
@@ -148,6 +153,8 @@ In this _Extra Credit_ section of the assignment, we explore the use of Azure SQ
 *Task 1:* You have now been asked to persit the results of your vehicle checks in a *Relational* database for auditing purposes. You should now extend your Vehicle Check application to persist the results of your Vehicle Checks in an Azure SQL Database.
 
 *Task 2:* Select a realistic query of *your choice*, and extend the Query Application from Part 3 to interact withe MS SQL Server database and perform the query.
+
+NOTE: It is not necessary to have completed Part 5 before attempting this Extra Credit section.
 
 == Submission Guidelines
 

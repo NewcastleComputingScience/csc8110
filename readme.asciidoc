@@ -1,8 +1,5 @@
 = CSC8110 Cloud Computing Coursework
 
-TODO: Introduction section.
-
-
 == Tutorials
 There are a number of tutorials to guide you in your use of the various Microsoft Azure technologies you will use in this coursework.
 
