@@ -1,10 +1,23 @@
 = CSC8110 Cloud Computing Coursework
 
 == Outline
-//This coursework is designed to give you experience building Java EE 6 applications and deploying them to the Cloud. You will build a real-world application using real enterprise technologies. This coursework provides you with an opportunity to work on an entire application, from the data-storage through to the web frontend. As a result you will need to become familiar with a wide range of technologies. It is important that you start the work early and ask for help when needed. By completing this coursework, you will gain some useful experience and skills.
+This coursework is designed to give you experience building Java EE 6 applications and deploying them to the Cloud. You will build a real-world application using real enterprise technologies. This coursework provides you with an opportunity to work on an entire application, from the data-storage through to the web frontend. As a result you will need to become familiar with a wide range of technologies. It is important that you start the work early and ask for help when needed. By completing this coursework, you will gain some useful experience and skills.
 
 //We consider the scenario of a network of Smart Speed Cameras, 
-TODO: Description of ANPR Scenario, with diagram.
+In this coursework we will consider the scenario of a network of "Smart Speed Cameras", equipped with Automatic Number Plate Recognition software. Newcastle City Council wish to scale the processing of this speed camera data into the Cloud. This coursework provides you with the opportunity to develop an entire Cloud-based system, connected using Azure's Service Bus brokering system. As a result you will need to become familiar with a wide range of technologies. It is important that you start the work early and ask for help when needed. By completing this coursework, you will gain some useful experience and skills.
+
+=== Aims
+* To make appropriate use of a variety of technologies to build a traffic management application in the Microsoft Azure cloud.
+* To gain familiarity, and reflect on, the use of Cloud technologies to tackle a real-world problem.
+
+=== Objectives
+* Programming, problem solving and system-design skills.
+* To gain experience using Microsoft Azure and the Azure SDK.
+* To gain practical experience using a message brokering system in the Cloud.
+* To gain experience using Azure Table storage and Azure SQL Database data stores in the Cloud.
+
+
+image:images/architecture_v3.png["CSC8110 2015-16 Architecture Diagram",align="center"]
 
 //== Technologies
 //This coursework covers a large number of technologies. The challenge here is to learn the right bits of each technology in order to complete the coursework.
@@ -165,11 +178,9 @@ A sign-up sheet for demonstration slots will be made available in the Computer c
 
 === Coursework submission
 You must submit all work via the coursework submission system (NESS).
-This should constitute a zip file containing the project source code and Maven build scripts. We will use this zip file to test your submission, so it should contain everything necessary to build and test your project.
+This should constitute a zip file containing the project source code and your Maven build scripts (if applicable). We will use this zip file to test your submission, so it should contain everything necessary to build and test your project.
 
 You should also submit a short report via NESS (roughly three pages) summarising the work carried out on this project, and an evaluation of how much you achieved. We are particularly interested in any assumptions you made, and how they motivated particular design decisions. You should also provide a brief discussion of your personal experience of the development process; e.g. which aspects of the project did you find particularly easy/hard?
-
-We have provided a list of things you should cover in your report in the "Report Hints" sections of this document.
 
 == Finally
 Demonstrators will be available in your cluster rooms during all practical sessions. You should go and see them if you are having any difficulties. This includes understanding what you have to do.
