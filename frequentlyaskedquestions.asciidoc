@@ -9,7 +9,10 @@ If there is something you would like to appear on this page, don't hesitate to c
 '''
 
 == Practical Tutorials
-None (yet).
+
+=== I am working on the VM pracical, but I'm based on Windows and find generating an SSH confusing. Is it sufficient for me to use the conventional 'password' approach at this stage?
+
+Authentication using SSH keys is the best-practice way of remotely authenticating with a server, but for the purposes of this tutorial, yes, it would be fine to use a password-based apporach.
 
 == Coursework
 None (yet).
