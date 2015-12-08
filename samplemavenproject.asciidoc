@@ -21,7 +21,7 @@ To run your application from the command line, type the following command at the
 
 `java -cp target/csc8110-1.0-SNAPSHOT-jar-with-dependencies.jar uk.ac.ncl.yourname.csc8110.App`
 
-Where...
+...where...
 
 - `java` is the command to run your application.
 
