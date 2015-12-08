@@ -31,7 +31,10 @@ To run your application from the command line, type the following command at the
 
 - `uk.ac.ncl.yourname.csc8110.App` is the name of the class containing a `main(String[] args)` method.
 
-== The importance of running Maven twice initially.
+== Query: I already have a simple Maven project created, what should I do?
+Simply download the sample project, inspec the `pom.xml` file and copy everything between `<build>...</build>` into your project. This will mean everything will run smoothly.
+
+== Query: The importance of running Maven twice initially.
 
 If you encounter an error message such as the following, please run `mvn clean package` one more time, and this will fix the issue for you.
 
