@@ -156,6 +156,8 @@ Re-run your application and observe Azure auto-scaling your application in respo
 
 == Part 6: Relational Databases in Azure (Extra Credit)
 
+NOTE: It is not necessary to have completed Part 5 before attempting this Extra Credit section.
+
 So far in this assignment we have considered persisting data to Azure's Table Storage. It is also possible to run full relational database systems (RDBMS) in Azure, through its Managed relational database-as-a-service offerings, offering high availability and scalability.
 
 In this _Extra Credit_ section of the assignment, we explore the use of Azure SQL Database to extend our scenario, to persist messages to a SQL Database running in the cloud, and perform a query against this database.
@@ -163,8 +165,6 @@ In this _Extra Credit_ section of the assignment, we explore the use of Azure SQ
 *Task 1:* You have now been asked to persit the results of your vehicle checks in a *Relational* database for auditing purposes. You should now extend your Vehicle Check application to persist the results of your Vehicle Checks in an Azure SQL Database.
 
 *Task 2:* Select a realistic query of *your choice*, and extend the Query Application from Part 3 to interact withe MS SQL Server database and perform the query.
-
-NOTE: It is not necessary to have completed Part 5 before attempting this Extra Credit section.
 
 == Submission Guidelines
 
