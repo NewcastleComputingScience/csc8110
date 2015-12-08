@@ -4,7 +4,7 @@ In response to a number of queries about running Maven projects, please find a s
 
 You may use this project as the starting point for your CSC8110 coursework.
 
-NOTE: You will see `yourname` mentioned in the directory structure, and in the `pom.xml` file. Before submission you will want to change this to be your own name (e.g. your university email address without any full stops). 
+NOTE: You will see `yourname` mentioned in the directory structure, and in the `pom.xml` file. Before submission you will want to change this to be your own name (e.g. your university email address without any full stops). This will require you to rename two folder in the directory structure (`csc8110/src/main/java/uk/ac/ncl/yourname` and `csc8110/src/test/java/uk/ac/ncl/yourname`) and lines `4` and `57` of your pom.xml file. This will also slightly change the commands for running your Maven project; where `yourname` appears in a command will be updated. If in doubt, ask a demonstrator for help renaming your project during the third week of the module, and we'll be happy to help. :-)
 
 == Running your Maven project.
 
