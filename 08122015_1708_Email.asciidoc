@@ -1,0 +1,54 @@
+Good afternoon everyone,
+
+I just wanted to take the time to get in touch and catch up after yesterday’s practicals for CSC8110 Cloud Computing.
+
+Firstly, I would like to make a general comment about the nature of this coursework. One of the key learning objectives, from my perspective, is to be able to demonstrate how the use of Cloud-based technologies, such as Service Bus, can help simplify what would otherwise pose a very complex implementation challenge. Much of the beauty from these technologies comes from the simplicity of your interaction with them (e.g. through a Java library offering simple methods such as ‘service.sendMessage(…)’) and that issues like scalability and reliability are handled for you.
+
+There is undoubtedly a learning curve associated with these technologies, and figuring out how the difference pieces fit together can be daunting, but I am certain that you will find Service Bus (and other technologies) will do much of the “heavy lifting” for you, allowing you to focus on what is important to you, the application logic (e.g. the Smart Speed Camera, the Police Monitor, etc). 
+
+The emphasis here is not on significant amounts of software development, rather on the *process* of considering how to make use of the Cloud technologies to develop an example application.
+
+Below I provide some additional resources based on my discussions with students yesterday. If there is anything you’re uncertain of, just let me know and I’ll be happy to help.
+
+
+=== Installing Git and Maven under Windows
+I have had a number of requests from people asking about making use of Maven and version control in their projects. In particular, these queries involved the installation of Git and Maven under Windows.
+
+To support those of you who have not installed Git and/or Maven on your systems before, I have compiled two screencasts which guide you through the process. These videos are available on Youtube, and linked from the following page in the CSC8110 Repository, along with additional supporting materials:
+
+
+
+
+https://github.com/NewcastleComputingScience/csc8110/blob/master/onlineresources.asciidoc
+
+
+
+
+*Video 1: CSC8110 2015-16: Installing Git and Maven in Windows*
+
+- This video shows you the process of downloading Git and Maven, and installing these on your system.
+
+
+*Video 2: CSC8110 2015-16: Creating your first Maven project.*
+
+- This video accompanies the “Maven in 5 minutes” guide available at https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html; and guides you through the process of creating a Maven project for Java, and shows you how to execute your project from the command line.
+
+
+=== Drop-in session
+As promised, I have taken a look at your timetables and found a slot where you are all free, to run an additional drop-in session. I will be available to discuss any queries you may have on Thursday morning (10th Dec). I will be available 8-10am in the practical labs (I understand the earlier end of this slot will probably be unpopular, but I wanted to make myself available as much as possible :-) ). Since I will be covering five rooms, please do make your presence known and I’ll make sure I get round to everyone.
+
+In addition to this, I would urge you all to get in touch via email if there’s anything you’re struggling with, and I’ll be happy to point you in the right direction.
+
+
+=== Microsoft Windows Azure codes
+I’m aware a number of students have not yet collected their Azure code. You will need your Azure code before beginning the practicals, so if you haven’t already done so, drop me an email and I’ll be happy to allocate one.
+
+Many thanks to those of you who have forwarded their Azure activation email to me. If you haven’t already done so, please send this through to matthew.forshaw@ncl.ac.uk. This is extremely helpful so I know that everyone has been able to activate their Azure accounts successfully.
+
+
+=== Any other questions?
+If anyone is encountering any difficulties working on the coursework assignment, please do not hesitate to drop me an email and let me know how things are going. Chances are, given a copy of your source code and any error output you are experiencing, I will be able to help diagnose the issue remotely.
+
+
+All the best,
+Matt
