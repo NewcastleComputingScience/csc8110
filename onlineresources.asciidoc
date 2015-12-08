@@ -27,7 +27,8 @@ If you would like to use Maven or Version Control in your coursework, but haven'
 
 link:https://git-scm.com/book/en/v2[Pro Git v2] (Great introductory book, avilable online for free, by Scott Chacon and Ben Straub. Chapters 1 and 2 are useful for an introduction!)
 
-link:http://homepages.cs.ncl.ac.uk/matthew.forshaw/teaching/csc8622/versioncontrol/[Version Control with Git] (Practical)
+link:https://try.github.io/levels/1/challenges/1[Learn Git in 15 minutes]
+link:http://homepages.cs.ncl.ac.uk/matthew.forshaw/teaching/csc8622/versioncontrol/[Version Control with Git] (Longer Practical)
 
 '''
 === Maven
