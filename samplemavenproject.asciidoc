@@ -1,0 +1,49 @@
+= Sample Maven Project
+
+In response to a number of queries about running Maven projects, please find a sample Maven project for CSC8110 available for download link:CSC8110SampleMavenProject.zip[here].
+
+You may use this project as the starting point for your CSC8110 coursework.
+
+NOTE: You will see `yourname` mentioned in the directory structure, and in the `pom.xml` file. Before submission you will want to change this to be your own name (e.g. your university email address without any full stops). 
+
+== Running your Maven project.
+
+Type the following command at the terminal / command prompt:
+
+`mvn clean package`
+
+This will create two JAR files in your `target/` directory, one called `csc8110-1.0-SNAPSHOT.jar` and the other `csc8110-1.0-SNAPSHOT-jar-with-dependencies.jar`.
+
+- `csc8110-1.0-SNAPSHOT.jar` is a Java ARchive file containing the source code you have created.
+- `csc8110-1.0-SNAPSHOT-jar-with-dependencies.jar` is a Java ARchive which also includes the code for any libraries your project depends on (in this example, the Azure Service Bus library). This is the `jar` file you are going to want to use to run your project.
+
+To run your application from the command line, type the following command at the terminal / command prompt:
+
+`java -cp target/csc8110-1.0-SNAPSHOT-jar-with-dependencies.jar uk.ac.ncl.yourname.csc8110.App`
+
+Where...
+
+- `java` is the command to run your application.
+
+- `-cp target/csc8110-1.0-SNAPSHOT-jar-with-dependencies.jar` adds your Java ARchive file to the classpath so Java knows what it should be running.
+
+//where `packagename` is your package e.g. `uk.ac.ncl.mattforshaw.csc8110`, and 
+
+- `uk.ac.ncl.yourname.csc8110.App` is the name of the class containing a `main(String[] args)` method.
+
+== The importance of running Maven twice initially.
+
+If you encounter an error message such as the following, please run `mvn clean package` one more time, and this will fix the issue for you.
+
+----
+Exception in thread "main" java.lang.RuntimeException: Service or property not registered:  com.microsoft.windowsazure.services.servicebus.ServiceBusContract class com.sun.jersey.api.client.Client
+	at com.microsoft.windowsazure.core.DefaultBuilder.build(DefaultBuilder.java:198)
+	at com.microsoft.windowsazure.core.DefaultBuilder$1.create(DefaultBuilder.java:138)
+	at com.microsoft.windowsazure.core.DefaultBuilder.build(DefaultBuilder.java:200)
+	at com.microsoft.windowsazure.core.DefaultBuilder$1.create(DefaultBuilder.java:138)
+	at com.microsoft.windowsazure.core.DefaultBuilder.build(DefaultBuilder.java:200)
+	at com.microsoft.windowsazure.Configuration.create(Configuration.java:113)
+	at com.microsoft.windowsazure.services.servicebus.ServiceBusService.create(ServiceBusService.java:51)
+	at uk.ac.ncl.yourname.AzureBusHandler.<init>(AzureBusHandler.java:42)
+	at uk.ac.ncl.yourname.Producer.main(Producer.java:25)
+----
