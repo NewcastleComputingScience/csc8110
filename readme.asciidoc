@@ -14,7 +14,7 @@ The following document (and accompanying presentation slides) outline the requir
 
 link:./coursework.asciidoc[View the coursework document]
 
-link:./csc8110coursework201516.pdf[View the presentation slides] (Available soon)
+link:./CSC8110CloudComputing_201516_CourseworkIntro.pdf[View the presentation slides]
 
 == Online Resources
 
