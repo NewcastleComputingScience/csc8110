@@ -183,8 +183,7 @@ You should also submit a short report via NESS (roughly three-five pages) summar
 - what you disliked most,
 - how you felt during and after the process,
 - what you found most difficult/straightforward,
-- how confident your are that your production code works,
-- would you use TDD again and why/why not?
+- how confident your are that your production code works
 
 == Finally
 Demonstrators will be available in your cluster rooms during all practical sessions. You should go and see them if you are having any difficulties. This includes understanding what you have to do.
