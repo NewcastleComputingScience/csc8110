@@ -148,9 +148,9 @@ At present, Azure Service Bus Topics do not support scaling based on queue lengt
 
 NOTE: See "How to Autoscale an Application" and in particular the "Queue Message" section at https://azure.microsoft.com/en-gb/documentation/articles/cloud-services-how-to-scale/
 
-NOTE: Remember, you will want to configure your application to start when your Virtual Machine is created. Ubuntu link:http://upstart.ubuntu.com/[upstart] is a great place to start.
+IMPORTANT: Based on the above guide, it is only possible to scale on queue length for an link=https://azure.microsoft.com/en-gb/documentation/articles/storage-java-how-to-use-queue-storage/["Azure Queue"] rather than Service Bus Topics we have used so far in this coursework. An intended learning outcome of this section is to adapt your solution to be able to make use of this additional type of queue to provide the scaling functionality. In future, Service Bus Topics will also allow for scaling, and will simplify this process.
 
-NOTE: Further tutorial guidance will be provided here throughout the first week of practicals.
+NOTE: Remember, you will want to configure your application to start when your Virtual Machine is created. Ubuntu link:http://upstart.ubuntu.com/[upstart] is a great place to start.
 
 Re-run your application and observe Azure auto-scaling your application in response to the number (and traffic rate) of Smart Speed Cameras active in your system.
 
