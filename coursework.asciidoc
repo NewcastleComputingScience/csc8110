@@ -45,7 +45,7 @@ TIP: You will be awarded a considerable number of marks for your use of version 
 
 == Part 1: Smart Speed Camera
 
-*Task 1:* You will first create a program in Java (or a programming language of your choice) to _simulate_ a Smart Speed Camera, equipped with Automatic Number Plate Recognition (ANPR) technology.
+*Task 1:* You will first create a program in Java (or a programming language of your choice) to _simulate_ a Smart Speed Camera.
 
 Your Smart Speed Camera should have the following properties. These may either be passed to the command line as command line arguments, or read from a properties or configuration file, but must *not* be hard coded into your application.
 
