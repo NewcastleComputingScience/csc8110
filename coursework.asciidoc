@@ -169,15 +169,22 @@ In this _Extra Credit_ section of the assignment, we explore the use of Azure SQ
 == Submission Guidelines
 
 === Demonstration
-Prior to submission you will provide a 10-15 minute demonstration to one of the Course Demonstrators. You will be expected to describe your technical solution and discuss your personal experiences throughout the project. 
-
-A sign-up sheet for demonstration slots will be made available in the Computer clusters at the start of the second week of practical sessions.
+NOTE: Due to time constraints, the requirement to demonstrate your solution has been removed. Marking will take place based on your submitted code and report. It is, therefore, important to ensure you document your experiences on your project well within your report.
 
 === Coursework submission
 You must submit all work via the coursework submission system (NESS).
 This should constitute a zip file containing the project source code and your Maven build scripts (if applicable). We will use this zip file to test your submission, so it should contain everything necessary to build and test your project.
 
-You should also submit a short report via NESS (roughly three pages) summarising the work carried out on this project, and an evaluation of how much you achieved. We are particularly interested in any assumptions you made, and how they motivated particular design decisions. You should also provide a brief discussion of your personal experience of the development process; e.g. which aspects of the project did you find particularly easy/hard?
+You should also submit a short report via NESS (roughly three-five pages) summarising the work carried out on this project, and an evaluation of how much you achieved. We are particularly interested in any assumptions you made, and how they motivated particular design decisions. As part of your report, you are required to write a brief reflection of your experiences using Cloud technologies. Areas you may wish to discuss include:
+
+- how you found the process,
+- what you learned about testing,
+- what you learned about development,
+- what you disliked most,
+- how you felt during and after the process,
+- what you found most difficult/straightforward,
+- how confident your are that your production code works,
+- would you use TDD again and why/why not?
 
 == Finally
 Demonstrators will be available in your cluster rooms during all practical sessions. You should go and see them if you are having any difficulties. This includes understanding what you have to do.
