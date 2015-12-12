@@ -66,3 +66,10 @@ Exception in thread "main" java.lang.RuntimeException: Service or property not r
 	at uk.ac.ncl.yourname.AzureBusHandler.<init>(AzureBusHandler.java:42)
 	at uk.ac.ncl.yourname.Producer.main(Producer.java:25)
 ----
+
+=== I am encountering issues creating my private Github repository
+I have, so far, had one report of a student attempting to create a private Github repository for CSC8110 using the link I sent yesterday, where the name of the repository created did not match their username. For example, if your username in Github is JoeBloggs, the repository created should be in the format https://github.com/NCL-CloudComputing/csc8110-cloud-computing-2015-16-JoeBloggs.
+
+I have raised this as an issue with Github (https://github.com/education/classroom/issues/360) and will keep everyone informed of progress. This appears to be an intermittent issue, so hopefully won’t affect most of you guys. 
+
+If anyone has encountered a similar problem, or has any other difficulties creating their Github repository, please do not hesitate to get in touch and we’ll do all we can to help.
