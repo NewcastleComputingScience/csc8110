@@ -16,7 +16,7 @@ Authentication using SSH keys is the best-practice way of remotely authenticatin
 
 == Coursework
 
-=== Common Issue: HTTP Error 400. The request has an invalid header name.
+=== Common Issue: `HTTP Error 400. The request has an invalid header name.`
 
 If you receive an exception as follows, this may be due to including a space in the name of a property e.g. `message.setProperty("Registration Plate",plate)`. Removing the space will fix the issue.
 
@@ -44,4 +44,25 @@ Caused by: com.sun.jersey.api.client.UniformInterfaceException: POST https://neh
     at com.microsoft.windowsazure.services.servicebus.implementation.ServiceBusRestProxy.sendTopicMessage(ServiceBusRestProxy.java:305)
     at com.microsoft.windowsazure.services.servicebus.implementation.ServiceBusExceptionProcessor.sendTopicMessage(ServiceBusExceptionProcessor.java:149)
     ... 6 more
+----
+
+=== Common Issue: `Service or property not registered`
+
+An existing link:https://github.com/Azure/azure-sdk-for-java/issues/465[bug] in the Azure library for Java may lead to a `Service or property not registered` error when running your application on the command line through Maven.
+
+If you encounter an error message such as the following, please run `rm -r target` to remove your target directory, then run `mvn clean package` twice, and this should fix the issue for you.
+
+It is important to note that if you receive the message below, this is due to the Azure bug and *cannot* be caused by errors in your code. Persevere repeating the steps above and this should fix the issue for you.
+
+----
+Exception in thread "main" java.lang.RuntimeException: Service or property not registered:  com.microsoft.windowsazure.services.servicebus.ServiceBusContract class com.sun.jersey.api.client.Client
+	at com.microsoft.windowsazure.core.DefaultBuilder.build(DefaultBuilder.java:198)
+	at com.microsoft.windowsazure.core.DefaultBuilder$1.create(DefaultBuilder.java:138)
+	at com.microsoft.windowsazure.core.DefaultBuilder.build(DefaultBuilder.java:200)
+	at com.microsoft.windowsazure.core.DefaultBuilder$1.create(DefaultBuilder.java:138)
+	at com.microsoft.windowsazure.core.DefaultBuilder.build(DefaultBuilder.java:200)
+	at com.microsoft.windowsazure.Configuration.create(Configuration.java:113)
+	at com.microsoft.windowsazure.services.servicebus.ServiceBusService.create(ServiceBusService.java:51)
+	at uk.ac.ncl.yourname.AzureBusHandler.<init>(AzureBusHandler.java:42)
+	at uk.ac.ncl.yourname.Producer.main(Producer.java:25)
 ----
