@@ -79,6 +79,7 @@ I've had a couple of queries asking how to get custom properies for messages whe
 
 The following code allows you to iterate through each of the custom properties and print them out one-by-one.
 
+[source,python]
 ----
 # recieve vehicle messages
 msg = bus_service.receive_subscription_message('yourTopicName', 'AllMessages', peek_lock=True)
@@ -90,6 +91,51 @@ for key in msg.custom_properties:
 
 To retrieve the value of a particular custom property, you could use code such as the following:
 
+[source,python]
 ----
 msg.custom_properties["propertyname"];
 ----
+
+
+[[anchor-java-cloudtable]]
+=== Java: Unexpected paramters to the constructor of `CloudTable`
+In Practical 3 for Java, a number of students have encountered difficulties creating `CloudTable` objects according to the tutorial instructions. A recent change to the Azure SDK has not been reflected in the documentation, so I would like to quickly outline the correct steps involved.
+
+First you will wish to define your connection string (in the same way you normally would): 
+
+[source,java]
+----
+// Define the connection-string with your values.
+public static final String storageConnectionString = 
+    "DefaultEndpointsProtocol=http;" + 
+    "AccountName=your_storage_account;" + 
+    "AccountKey=your_storage_account_key";
+----
+
+Now, create variables to store your storage account name and table name:
+
+[source,java]
+----
+String tableName = "YOUR_TABLE_NAME";
+String storageAccountName = "YOUR_STORAGE_ACCOUNT_NAME";
+----
+
+To quote the original tutorial:
+
+----
+URL format: Code addresses tables in an account using this address format:
+http://<storage account>.table.core.windows.net/<table>
+----
+
+Now you will wish to establish a connection, and create your table if it does not already exist.
+
+[source,java]
+----
+StorageCredentials storageCredentials = StorageCredentials.tryParseCredentials(storageConnectionString);
+URI uriTable = new URI("http://" + storageAccountName + ".table.core.windows.net/" + tableName);
+StorageUri storageURI = new StorageUri(uriTable);
+CloudTable cloudTable = new CloudTable(storageURI,storageCredentials);
+cloudTable.createIfNotExists();
+----
+
+Now you should be up and running, and the remainder of the tutorial will work well :) 
