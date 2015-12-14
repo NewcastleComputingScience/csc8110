@@ -8,6 +8,7 @@ link:https://azure.microsoft.com/en-gb/documentation/articles/virtual-machines-l
 link:https://azure.microsoft.com/en-gb/documentation/articles/service-bus-java-how-to-use-topics-subscriptions/[Practical Two: How to use Azure Service Bus topics and subscriptions]
 
 link:https://azure.microsoft.com/en-gb/documentation/articles/storage-java-how-to-use-table-storage/[Practical Three: How to use Table storage from Java]
+Note: a recent Azure SDK change has changed the way to create `CloudTable` objects. For detailed instructions of how to create `CloudTable` objects, please see the entry in the FAQ section link:https://github.com/NewcastleComputingScience/csc8110/blob/master/frequentlyaskedquestions.asciidoc#anchor-java-cloudtable[here].
 
 == Coursework
 The following document (and accompanying presentation slides) outline the requirements of the CSC8110 Cloud Computing assignment.
