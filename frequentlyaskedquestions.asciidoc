@@ -73,3 +73,23 @@ I have, so far, had one report of a student attempting to create a private Githu
 I have raised this as an issue with Github (https://github.com/education/classroom/issues/360) and will keep everyone informed of progress. This appears to be an intermittent issue, so hopefully won’t affect most of you guys. 
 
 If anyone has encountered a similar problem, or has any other difficulties creating their Github repository, please do not hesitate to get in touch and we’ll do all we can to help.
+
+=== Python: Returning custom properties for messages.
+I've had a couple of queries asking how to get custom properies for messages when using Azure from Python.
+
+The following code allows you to iterate through each of the custom properties and print them out one-by-one.
+
+----
+# recieve vehicle messages
+msg = bus_service.receive_subscription_message('yourTopicName', 'AllMessages', peek_lock=True)
+print(msg.body)
+
+for key in msg.custom_properties:
+	print key, 'corresponds to', msg.custom_properties[key]
+----
+
+To retrieve the value of a particular custom property, you could use code such as the following:
+
+----
+msg.custom_properties["propertyname"];
+----
