@@ -123,6 +123,8 @@ NOTE: Unlike relational databases, NoSQL does not support JOIN statements, so yo
 
 == Part 5: Vehicle Check (+ Auto-Scaling in Azure)
 
+NOTE: It is not necessary to have completed this part before attempting the Part 6 Extra Credit section.
+
 So far in this assignment we have considered simple message consumers which are capable of processing messages (vehicle sightings) quickly. 
 
 We now wish to extend our application to perform checks on vehicles, a process which we can assume will take a number of seconds per vehicle. In this situation, a single Vehicle Check application may struggle to satisfy demand when there are a high volume of requests to satisfy. 
