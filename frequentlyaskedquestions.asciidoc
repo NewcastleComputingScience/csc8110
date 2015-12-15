@@ -97,8 +97,23 @@ msg.custom_properties["propertyname"];
 ----
 
 
+=== Java: Which dependency should I add to start using Azure Table Storage from Java?
+
+If you are using Maven for your build you can insert the following depencency to your pom within your `<dependencies>...</dependencies>` block.
+
+[source,xml]
+----
+    <dependency>
+      <groupId>com.microsoft.azure</groupId>
+      <artifactId>azure-storage</artifactId>
+      <version>4.0.0</version>
+    </dependency>
+----
+
+If you are adding your dependencies to your classpath inside your IDE such as Eclipse or IntelliJ, you can download the jar file link:http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-storage%22[here].
+
 [[anchor-java-cloudtable]]
-=== Java: Unexpected paramters to the constructor of `CloudTable`
+=== Java: Unexpected parameters to the constructor of `CloudTable`
 In Practical 3 for Java, a number of students have encountered difficulties creating `CloudTable` objects according to the tutorial instructions. A recent change to the Azure SDK has not been reflected in the documentation, so I would like to quickly outline the correct steps involved.
 
 First you will wish to define your connection string (in the same way you normally would): 
