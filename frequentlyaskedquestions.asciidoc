@@ -167,7 +167,7 @@ Two promising options are `Azure Storage Explorer for Windows` and `Azure Web St
 These tools are currently untested for this coursework, so please do get in touch with us to let us know your experiences using these tools, and we will update the FAQ section.
 
 
-[[anchor-nothreads]
+[[anchor-nothreads]]
 === General: Should I be using Threads to achieve parallelism of my Smart Speed Camera
 
 No. You should design your Smart Speed Camera application such that it could be run simultaneously a number of times. Your source code for your Smart Speed Camera should model the operation of a *single* Smart Speed Camera instance (with a particular location, speed limit, and stream of randomly generated traffic). You should then be able to run multiple copies of this program (with different command line arguments or properties file) to model multiple Smart Speed Cameras distributed throughout a city.
@@ -175,3 +175,59 @@ No. You should design your Smart Speed Camera application such that it could be 
 For those of you who have pursused a threaded approach in your application, do not worry. A threaded approach will often be much more complicated than a non-theaded one, so it should be relatively easy to refactor your code as described above. My advice to anyone who currently has a threaded approach would be to prioritise making this change over completing subsequent tasks in the coursework assignment.
 
 If anyone has any queries about this, please don't hesitate to get in touch, providing a link to your source code in your private Github repository (or via the University link:http://dropoff.ncl.ac.uk[Dropoff] service) and I will be happy to advise. Similarly, please don't hesitate to discuss this with your demonstrator during the remaining practical slots.
+
+
+[[anchor-readingpropertybeforeifstatement]
+=== Java: When I run my code to recieve messages from the Service Bus, I receive an `Generic exception encountered: null` exception.
+
+There are a number of reasons why such an exception might be thrown, but I would like to take a couple of minutes to describe how you might go about diagnosing this further, and point people in the direction of one common misunderstanding.
+
+==== How can I find out what's actually going on?
+
+It is likely you will have the following code block in your solution, based on the tutorial:
+
+[source,java]
+----
+try {
+	... 
+} catch (Exception e) {
+	System.out.print("Generic exception encountered: ");
+	System.out.println(e.getMessage());
+	System.exit(-1);
+}
+----
+
+When this exception is thrown, you will often receive the slightly *less* than useful message: `Generic exception encountered: null`
+
+You can adapt your code to look like the following, which will provide you more information about the exception you have encountered:
+
+[source,java]
+----
+try {
+	... 
+} catch (Exception e) {
+	System.out.print("Generic exception encountered: ");
+	System.out.println(e.getMessage());
+	e.printStackTrace();
+	System.exit(-1);
+}
+----
+
+This should highlight the precise issue which is causing an exception to be thrown.
+
+==== The most common cause
+The most common cause students have had when encountering this issue, has been to access the `getProperty()` method of the returned `BrokeredMessage` *before* the `if` statemnt which ensures the message is not null and has a message ID.
+
+This check is performed in the following line in your code:
+
+[source,java]
+----
+if (message != null && message.getMessageId() != null
+{
+	...
+}
+----
+
+In the event that you ask for messages from the Service Bus, but your topic does not contain any messages, your `message` variable will be set to `null`. If you then attempt to call the `getProperty()` method on the null object, an exception will be thrown.
+
+*The solution: * Only change the code within the `if` statement shown above.
