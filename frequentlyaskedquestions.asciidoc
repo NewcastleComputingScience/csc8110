@@ -154,3 +154,14 @@ cloudTable.createIfNotExists();
 ----
 
 Now you should be up and running, and the remainder of the tutorial will work well :) 
+
+[[anchor-viewtablestorage]]
+=== General: How can I view the contents of my Azure Table Storage tables?
+
+A few students have asked me about approaches to being able to view the contents of their tables in Table Storage. This can be a useful additional step in helping debug your application. 
+
+A list of tools to view the contents of Table Storage tables is available link:http://blogs.msdn.com/b/windowsazurestorage/archive/2014/03/11/windows-azure-storage-explorers-2014.aspx[here]. 
+
+Two promising options are `Azure Storage Explorer for Windows` and `Azure Web Storage Explorer`. The first option should be installed on your own computer (Windows only) while the other should work in your web browser if you provide your account and key.
+
+These tools are currently untested for this coursework, so please do get in touch with us to let us know your experiences using these tools, and we will update the FAQ section.
