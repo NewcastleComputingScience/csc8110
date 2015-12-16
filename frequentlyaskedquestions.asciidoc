@@ -177,7 +177,7 @@ For those of you who have pursused a threaded approach in your application, do n
 If anyone has any queries about this, please don't hesitate to get in touch, providing a link to your source code in your private Github repository (or via the University link:http://dropoff.ncl.ac.uk[Dropoff] service) and I will be happy to advise. Similarly, please don't hesitate to discuss this with your demonstrator during the remaining practical slots.
 
 
-[[anchor-readingpropertybeforeifstatement]
+[[anchor-readingpropertybeforeifstatement]]
 === Java: When I run my code to recieve messages from the Service Bus, I receive an `Generic exception encountered: null` exception.
 
 There are a number of reasons why such an exception might be thrown, but I would like to take a couple of minutes to describe how you might go about diagnosing this further, and point people in the direction of one common misunderstanding.
