@@ -231,3 +231,11 @@ if (message != null && message.getMessageId() != null
 In the event that you ask for messages from the Service Bus, but your topic does not contain any messages, your `message` variable will be set to `null`. If you then attempt to call the `getProperty()` method on the null object, an exception will be thrown.
 
 *The solution: * Only change the code within the `if` statement shown above.
+
+
+
+=== Advice on selection of Partition and Row Keys
+
+The following link provides a good (but very comprehensive) guide to designing your Table Storage tables, including the selection of appropriate Partition and Row Keys. 
+
+https://azure.microsoft.com/en-gb/documentation/articles/storage-table-design-guide/
