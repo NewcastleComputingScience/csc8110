@@ -175,7 +175,10 @@ NOTE: Due to time constraints, the requirement to demonstrate your solution has 
 
 === Coursework submission
 You must submit all work via the coursework submission system (NESS).
+
 This should constitute a zip file containing the project source code and your Maven build scripts (if applicable). We will use this zip file to test your submission, so it should contain everything necessary to build and test your project.
+
+In addition to the source code, we would like to see evidence (either in textual output, or screenshot form) demonstrating each area of functionality you have completed as part of the assignment. These should be included in your report document (with sufficient screen resolution so the images are legible), or included as images as part of your zip file and carefully named to suggest which area of functionality they pertain to.
 
 You should also submit a short report via NESS (roughly three-five pages) summarising the work carried out on this project, and an evaluation of how much you achieved. We are particularly interested in any assumptions you made, and how they motivated particular design decisions. As part of your report, you are required to write a brief reflection of your experiences using Cloud technologies. Areas you may wish to discuss include:
 
