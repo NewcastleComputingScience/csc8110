@@ -35,11 +35,9 @@ For this project, if you use Java, you are advised to use a link:http://maven.ap
 
 *Storing your work*
 ==========================
-You *must* save your work using the link:http://git-scm.com/[Git] version control system, regularly commiting changes and pushing to the provided private link:http://github.com/[Github] repository.  
+You may save your work using the link:http://git-scm.com/[Git] version control system, regularly commiting changes and pushing to the provided private link:http://github.com/[Github] repository. If you would like a private repository created, please email Matt Forshaw. 
 
 You should push commits of your coursework regularly to your GitHub repo. It is a good idea to do so every time you get a small piece of functionality working. This ensures that you can move back to a working state if you get in a mess. It also ensures that you have a backup and that the demonstrators can view your code and track progress.
-
-TIP: You will be awarded a considerable number of marks for your use of version control. We expect to see a steady flow of sensible commits to Github over the coursework period.
 ==========================
 
 
