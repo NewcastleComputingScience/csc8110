@@ -1,6 +1,6 @@
 = Online Resources
 
-This page will be updated regularly by CSC8110 demonstrators to include answers to frequently asked questions and solutions to any issues encountered by students.
+This page will be updated regularly by CSC8110 demonstrators to provide additional online resources we think you may find useful.
 
 If there is something you would like to appear on this page, don't hesitate to contact Matthew Forshaw (mailto:matthew.forshaw@ncl.ac.uk[matthew.forshaw@ncl.ac.uk]) and he will update the page accordingly.
 
