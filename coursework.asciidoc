@@ -11,7 +11,7 @@ In this coursework we will consider the scenario of a network of "Smart Speed Ca
 * Programming, problem solving and system-design skills.
 * To gain experience using Microsoft Azure and the Azure SDK.
 * To gain practical experience using a message brokering system in the Cloud.
-* To gain experience using Azure Table storage and Azure SQL Database data stores in the Cloud.
+* To gain experience using Azure Table Storage data stores in the Cloud.
 
 
 image:images/architecture_v3.png["CSC8110 2015-16 Architecture Diagram",align="center"]
@@ -121,7 +121,7 @@ NOTE: "Create subscriptions with filters" in https://azure.microsoft.com/en-gb/d
 
 NOTE: Unlike relational databases, NoSQL does not support JOIN statements, so you will need to execute multiple queries against your NoSQL data store and perform the JOIN between _SpeedingVehicles_ and _Sightings_ programmatically within your application logic.
 
-== Part 5: Vehicle Check (+ Auto-Scaling in Azure)
+== Part 5: Vehicle Check
 
 NOTE: It is not necessary to have completed this part before attempting the Part 6 Extra Credit section.
 
@@ -144,7 +144,9 @@ public static boolean isVehicleStolen(String vehicleRegistration)
 
 Test your application (running a single instance of the Vehicle Check), and demonstrate that due to the long-running nature of the task, it is unable to cope with large volumes of requests in a timely manner.
 
-*Task 2:* Experiment with the use of auto-scaling in Azure, to run your Vehicle Check application in the cloud and configure it to automatically respond to increased rate of requests.
+== Part 5.b: Auto-Scaling in Azure (Extra Credit)
+
+In this _Extra Credit_ section of the assignment, we will experiment with the use of auto-scaling in Azure, to run your Vehicle Check application in the cloud and configure it to automatically respond to increased rate of requests.
 
 At present, Azure Service Bus Topics do not support scaling based on queue length, so you will have to update your Police Monitor application to forward messages relating to speeding cars to an Azure Queue for further processing, and update your Vehicle Check application to retrieve messages from that queue.
 
@@ -156,29 +158,17 @@ NOTE: Remember, you will want to configure your application to start when your V
 
 Re-run your application and observe Azure auto-scaling your application in response to the number (and traffic rate) of Smart Speed Cameras active in your system.
 
-== Part 6: Relational Databases in Azure (Extra Credit)
-
-NOTE: It is not necessary to have completed Part 5 before attempting this Extra Credit section.
-
-So far in this assignment we have considered persisting data to Azure's Table Storage. It is also possible to run full relational database systems (RDBMS) in Azure, through its Managed relational database-as-a-service offerings, offering high availability and scalability.
-
-In this _Extra Credit_ section of the assignment, we explore the use of Azure SQL Database to extend our scenario, to persist messages to a SQL Database running in the cloud, and perform a query against this database.
-
-*Task 1:* You have now been asked to persit the results of your vehicle checks in a *Relational* database for auditing purposes. You should now extend your Vehicle Check application to persist the results of your Vehicle Checks in an Azure SQL Database.
-
-*Task 2:* Select a realistic query of *your choice*, and extend the Query Application from Part 3 to interact withe MS SQL Server database and perform the query.
-
 == Submission Guidelines
 
 === Demonstration
-NOTE: Due to time constraints, the requirement to demonstrate your solution has been removed. Marking will take place based on your submitted code and report. It is, therefore, important to ensure you document your experiences on your project well within your report.
+You will demonstrate your working coursework assignment, during the final practical slot on Thursday 15th December 2016, 4-6pm. We will distribute sign-up sheets so you can book a slot during the second week of the course.
 
 === Coursework submission
 You must submit all work via the coursework submission system (NESS).
 
 This should constitute a zip file containing the project source code and your Maven build scripts (if applicable). We will use this zip file to test your submission, so it should contain everything necessary to build and test your project.
 
-In addition to the source code, it would be useful to our markers to see evidence (either in textual output, or screenshot form) demonstrating each area of functionality you have completed as part of the assignment. These could be included in your report document (with sufficient screen resolution so the images are legible), or included as images as part of your zip file and carefully named to suggest which area of functionality they pertain to. *Important:* Including a copy of your program output is *not* something which will carry marks, nor will you lose marks for not including them; this simply serves as a helpful way to signpost markers to the right parts of your solution. 
+In addition to the source code, it would be useful to our markers to see evidence (either in textual output, or screenshot form) demonstrating each area of functionality you have completed as part of the assignment. These could be included in your report document (with sufficient screen resolution so the images are legible), or included as images as part of your zip file and carefully named to suggest which area of functionality they pertain to.
 
 You should also submit a short report via NESS (roughly three-five pages) summarising the work carried out on this project, and an evaluation of how much you achieved. We are particularly interested in any assumptions you made, and how they motivated particular design decisions. As part of your report, you are required to write a brief reflection of your experiences using Cloud technologies. Areas you may wish to discuss include:
 
@@ -193,8 +183,7 @@ You should also submit a short report via NESS (roughly three-five pages) summar
 == Finally
 Demonstrators will be available in your cluster rooms during all practical sessions. You should go and see them if you are having any difficulties. This includes understanding what you have to do.
 
-Discussion Boards will also be available for CSC8110 in Blackboard (http://bb.ncl.ac.uk). You may post any questions about the tutorial or coursework assignment here, and the discussion boards will be monitored by Course Demonstrators. Before posting you should use the discussion boards' search facilities to see if somebody has already encountered the same problem.
+A dedicated Slack channel is available for CSC8110 (https://newcastle-csc8110.slack.com/messages/). You may post any questions about the tutorial or coursework assignment here, and the channel will be monitored by Course Demonstrators. Before posting you should use Slack' search facilities to see if somebody has already encountered the same problem.
 Also frequently asked questions will be posted by demonstrators link:https://github.com/NewcastleComputingScience/csc8110/blob/master/frequentlyaskedquestions.asciidoc[here].
 
 TIP: If you see a question on the discussion boards you know how to answer, we strongly encourage you to assist your colleagues!
-
