@@ -75,7 +75,7 @@ NOTE: We expect you will run multiple instances of your Smart Speed Camera appli
 
 == Part 2: NoSQL Consumer
 
-You will then create a _'NoSQL Consumer'_ which retrieves messages from your queue and stores the details of customers and orders in a NoSQL data store. In this coursework we will be using Azure's Table Storage, a scalable datastore for the storage and querying of structured, non-relational data. 
+You will then create a _'NoSQL Consumer'_ which retrieves messages from your queue and stores the details of in a NoSQL data store. In this coursework we will be using Azure's Table Storage, a scalable datastore for the storage and querying of structured, non-relational data. 
 
 NOTE: A full description of the Azure Table Storage service, instructions for creating a storage account from the Azure Management Portal, and Java source code examples can be found in the practical material.
 
