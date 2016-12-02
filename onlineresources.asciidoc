@@ -15,7 +15,7 @@ link:https://azure.microsoft.com/en-gb/documentation/articles/virtual-machines-c
 === Installing Git and Maven under Windows
 
 ==== Video 1: link:https://www.youtube.com/watch?v=7RkLdstgVA0[CSC8110: Installing Git and Maven in Windows]
-This video shows you the process of downloading Git and Maven, and installing these on your system. This is a Windows specific guide, so if you are using another operating system (e.g. Linux or Mac OS X), please let me know and I will be able to provide you with custom instructions for these platforms.
+This video shows you the process of downloading Git and Maven, and installing these on your system. This is a Windows specific guide, so if you are using another operating system (e.g. Linux or Mac OS X), please let me know and I will be able to provide you with custom instructions for these platforms. I have been assured that Git is installed on your University machines, so this step should not be necessary if you are not using your own machine.
 
 ==== Video 2: link:https://www.youtube.com/watch?v=oLzr3XphpIE[CSC8110: Creating your first Maven project.]
 This video accompanies the link:https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html["Maven in 5 minutes"] guide; and guides you through the process of creating a Maven project for Java, and shows you how to execute your project from the command line.
