@@ -5,3 +5,6 @@ This page will be updated regularly by CSC8110 demonstrators to include answers 
 If you are encountering an issue and cannot find a solution here, please do not hesitate to contact a demonstrator during the practical sessions, or post to the relevant forum on the Blackboard discussion boards.
 
 If there is something you would like to appear on this page, don't hesitate to contact Matthew Forshaw (mailto:matthew.forshaw@ncl.ac.uk[matthew.forshaw@ncl.ac.uk])  and he will update the page accordingly.
+
+=== Problems signing up for Slack
+Some students have encountered difficulties signing up for the Slack channel for CSC8110. To sign up successfully, please ensure you sign up using your `@ncl.ac.uk` version of your email address. If you encounter any further difficulties, please don't hesitate to contact Matt.
