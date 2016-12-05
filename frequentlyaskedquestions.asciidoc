@@ -8,3 +8,7 @@ If there is something you would like to appear on this page, don't hesitate to c
 
 === Problems signing up for Slack
 Some students have encountered difficulties signing up for the Slack channel for CSC8110. To sign up successfully, please ensure you sign up using your `@ncl.ac.uk` version of your email address. If you encounter any further difficulties, please don't hesitate to contact Matt.
+
+
+=== Problems installing the Azure Toolkit for Eclipse
+Students are reporting issues installing Azure Toolkit for Eclipse, without admin privileges. Instead of doing this, download the Azure SDK for Java as a zip file at https://docs.microsoft.com/en-us/azure/java-download-azure-sdk, or using Maven. Please ask a demonstrator if you require further assistance.
