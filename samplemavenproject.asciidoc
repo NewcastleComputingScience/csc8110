@@ -1,7 +1,5 @@
 = Sample Maven Project
 
-_Update:_ As of 9th January 2016, updated Azure SDK dependencies (version 0.9.1) are now available through Maven Central (http://search.maven.org/#artifactdetails%7Ccom.microsoft.azure%7Cazure%7C0.9.1%7Cpom). It is not yet confirmed that this update contains a bugfix for the previously reported `Service or property not registered` issue. This page will be updated once this has been established.
-
 In response to a number of queries about running Maven projects, please find a sample Maven project for CSC8110 available for download link:CSC8110SampleMavenProject.zip[here].
 
 You may use this project as the starting point for your CSC8110 coursework.
