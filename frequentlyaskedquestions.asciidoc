@@ -12,3 +12,6 @@ Some students have encountered difficulties signing up for the Slack channel for
 
 === Problems installing the Azure Toolkit for Eclipse
 Students are reporting issues installing Azure Toolkit for Eclipse, without admin privileges. Instead of doing this, download the Azure SDK for Java as a zip file at https://docs.microsoft.com/en-us/azure/java-download-azure-sdk, or using Maven. Please ask a demonstrator if you require further assistance.
+
+=== Problems using Topics in Service Bus namespaces
+A recent change to Azure (which is not reflected in the Microsoft tutorial) means you must have either a 'Standard' or 'Premium' service bus namespace to use Topics and Subscriptions. When you create your Service Bus namespace, make sure you select the 'Standard' or 'Premium' pricing tier. Full details of the capabilities of the Service Bus at each of these pricing levels is available at https://docs.microsoft.com/en-gb/azure/service-bus-messaging/service-bus-java-how-to-use-topics-subscriptions .
